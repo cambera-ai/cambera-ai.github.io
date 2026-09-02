@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cambera — We pour intelligence into construction</title>
+<meta name="description" content="AI-native design-to-production platform for the construction industry. In development — Gdańsk, Poland.">
+<meta property="og:title" content="Cambera — We pour intelligence into construction">
+<meta property="og:description" content="AI-native design-to-production platform for the construction industry. In development.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#11110e;--paper:#f6efe8;--oxide:#a52a23;--ink-3:#bfb7ac;--paper-3:rgba(246,239,232,.18);--mute:#7d776d;
+  --font:"Space Grotesk",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:var(--font);background:var(--ink);color:var(--paper);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.page{min-height:100svh;display:grid;grid-template-rows:auto 1fr auto;width:min(1180px,calc(100% - 48px));margin:0 auto;padding:28px 0 32px}
+header{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);opacity:0;animation:rise .8s .05s forwards}
+header img{height:16px;display:block}
+main{display:grid;place-items:center;text-align:center;padding:40px 0}
+.lockup{height:clamp(110px,14vw,170px);width:auto;opacity:0;animation:rise 1s .2s forwards}
+h1{margin:clamp(28px,4vw,48px) auto 0;font-size:clamp(2.2rem,4.6vw,4rem);font-weight:600;letter-spacing:-.025em;line-height:1.08;max-width:14ch;opacity:0;animation:rise 1s .55s forwards}
+h1 i{font-style:normal;color:var(--oxide)}
+.sub{margin:22px auto 0;font-size:clamp(1rem,1.35vw,1.2rem);color:var(--ink-3);max-width:40ch;opacity:0;animation:rise 1s .8s forwards}
+.rule{width:56px;height:2px;background:var(--oxide);margin:34px auto 0;opacity:0;animation:rise 1s .95s forwards}
+.cta{margin-top:34px;opacity:0;animation:rise 1s 1.05s forwards}
+.btn{display:inline-block;background:var(--oxide);color:var(--paper);padding:13px 22px;border-radius:6px;text-decoration:none;font-weight:500;transition:background .15s,transform .15s}
+.btn:hover{background:#8f241e;transform:translateY(-1px)}
+footer{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;color:var(--mute);font-size:.88rem;border-top:1px solid var(--paper-3);padding-top:22px;opacity:0;animation:rise 1s 1.25s forwards}
+footer .links{display:flex;gap:22px}
+footer a{text-decoration:none;border-bottom:1px solid var(--paper-3);padding-bottom:2px}
+footer a:hover{color:var(--paper);border-color:var(--paper)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (max-width:640px){header span{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important}}
+</style>
+</head>
+<body>
+<div class="page">
+  <header><img src="assets/cambera-wordmark-light.svg" alt="Cambera"><span>In development · Gdańsk, Poland</span></header>
+
+  <main>
+    <div>
+      <img class="lockup" src="assets/cambera-symbol-dark.svg" alt="">
+      <h1>We pour intelligence into construction<i>.</i></h1>
+      <p class="sub">AI-native design-to-production platform for the construction industry.</p>
+      <div class="rule"></div>
+      <div class="cta"><a class="btn" href="mailto:hello@cambera.ai?subject=Cambera%20%E2%80%94%20early%20access">Get early access</a></div>
+    </div>
+  </main>
+
+  <footer>
+    <span>© 2026 Cambera</span>
+    <span class="links"><a href="mailto:hello@cambera.ai">hello@cambera.ai</a><a href="https://www.linkedin.com/company/cambera" rel="noopener">LinkedIn</a></span>
+  </footer>
+</div>
+</body>
+</html>
