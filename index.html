@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cambera — We pour intelligence into construction</title>
-<meta name="description" content="AI-native design-to-production platform for the construction industry. In development — Gdańsk, Poland.">
+<meta name="description" content="Our mission is to raise the productivity and efficiency of the entire construction industry, worldwide. Cambera is an AI-native design-to-production platform. In development — Gdańsk, Poland.">
 <meta property="og:title" content="Cambera — We pour intelligence into construction">
-<meta property="og:description" content="AI-native design-to-production platform for the construction industry. In development.">
+<meta property="og:description" content="Our mission is to raise the productivity and efficiency of the entire construction industry, worldwide.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cambera-ai.github.io/">
 <meta property="og:image" content="https://cambera-ai.github.io/og.png">
@@ -31,7 +31,8 @@ header{display:flex;justify-content:space-between;align-items:center;font-family
 header img{height:16px;display:block}
 main{display:grid;place-items:center;text-align:center;padding:40px 0}
 .lockup{height:clamp(110px,14vw,170px);width:auto;opacity:0;animation:rise 1s .2s forwards}
-h1{margin:clamp(28px,4vw,48px) auto 0;font-size:clamp(2.2rem,4.6vw,4rem);font-weight:600;letter-spacing:-.025em;line-height:1.08;max-width:14ch;opacity:0;animation:rise 1s .55s forwards}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin:clamp(30px,4vw,46px) auto 0;opacity:0;animation:rise 1s .45s forwards}
+h1{margin:clamp(14px,1.6vw,20px) auto 0;font-size:clamp(2.2rem,4.6vw,4rem);font-weight:600;letter-spacing:-.025em;line-height:1.08;max-width:14ch;opacity:0;animation:rise 1s .55s forwards}
 h1 i{font-style:normal;color:var(--oxide)}
 .sub{margin:22px auto 0;font-size:clamp(1rem,1.35vw,1.2rem);color:var(--ink-3);max-width:40ch;opacity:0;animation:rise 1s .8s forwards}
 .rule{width:56px;height:2px;background:var(--oxide);margin:34px auto 0;opacity:0;animation:rise 1s .95s forwards}
@@ -42,6 +43,20 @@ footer{display:flex;justify-content:space-between;align-items:baseline;gap:20px;
 footer .links{display:flex;gap:22px}
 footer a{text-decoration:none;border-bottom:1px solid var(--paper-3);padding-bottom:2px}
 footer a:hover{color:var(--paper);border-color:var(--paper)}
+.scroll{display:block;margin:26px auto 0;font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-decoration:none;opacity:0;animation:rise 1s 1.4s forwards}
+.scroll:hover{color:var(--paper)}
+.mission{border-top:1px solid var(--paper-3);background:var(--ink)}
+.mission .wrap{width:min(1180px,calc(100% - 48px));margin:0 auto;padding:clamp(64px,9vw,120px) 0 clamp(56px,8vw,104px)}
+.mission .label{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--oxide)}
+.mission h2{margin:22px 0 0;font-size:clamp(1.6rem,3.1vw,2.6rem);font-weight:500;letter-spacing:-.02em;line-height:1.2;max-width:30ch}
+.mission h2 b{font-weight:600;color:var(--paper)}
+.mission h2{color:var(--ink-3)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:clamp(40px,5vw,64px)}
+.grid .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.grid .v{font-size:clamp(1.5rem,2.3vw,2rem);font-weight:600;letter-spacing:-.02em;margin-top:10px}
+.grid .d{color:var(--ink-3);font-size:.95rem;margin-top:8px;max-width:26ch}
+.grid > div{border-top:2px solid var(--oxide);padding-top:16px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @media (max-width:640px){header span{display:none}}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important}}
@@ -54,13 +69,30 @@ footer a:hover{color:var(--paper);border-color:var(--paper)}
   <main>
     <div>
       <img class="lockup" src="assets/cambera-symbol-dark.svg" alt="">
+      <p class="eyebrow">AI-native design-to-production platform</p>
       <h1>We pour intelligence into construction<i>.</i></h1>
-      <p class="sub">AI-native design-to-production platform for the construction industry.</p>
+      <p class="sub">We generate the engineering decisions — and prove them.</p>
       <div class="rule"></div>
       <div class="cta"><a class="btn" href="mailto:hello@cambera.ai?subject=Cambera%20%E2%80%94%20early%20access">Get early access</a></div>
+      <a class="scroll" href="#mission">Our mission ↓</a>
     </div>
   </main>
 
+  </div>
+
+<section class="mission" id="mission">
+  <div class="wrap">
+    <p class="label">Mission</p>
+    <h2>Our mission is to raise the <b>productivity</b> and <b>efficiency</b> of the entire construction industry, worldwide.</h2>
+    <div class="grid">
+      <div><p class="k">Productivity</p><p class="v">More built per engineer-hour</p><p class="d">Generated engineering decisions instead of manual detailing.</p></div>
+      <div><p class="k">Efficiency</p><p class="v">Less steel, concrete, rework</p><p class="d">Every element verified before it reaches the plant floor.</p></div>
+      <div><p class="k">Scale</p><p class="v">Industry-wide, not one niche</p><p class="d">Construction is the world’s largest industry — even single-digit gains compound across every project.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="page" style="min-height:0;padding:0 0 32px">
   <footer>
     <span>© 2026 Cambera</span>
     <span class="links"><a href="mailto:hello@cambera.ai">hello@cambera.ai</a><a href="https://www.linkedin.com/company/cambera" rel="noopener">LinkedIn</a></span>
