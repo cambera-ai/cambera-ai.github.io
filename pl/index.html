@@ -29,11 +29,13 @@
 :root{--ink:#11110e;--paper:#f6efe8;--oxide:#a52a23;--ink-3:#bfb7ac;--paper-3:rgba(246,239,232,.18);--mute:#7d776d;
   --font:"Space Grotesk",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
+html,body{min-height:100%}
 body{font-family:var(--font);background:var(--ink);color:var(--paper);line-height:1.5;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.page{min-height:100svh;display:grid;grid-template-rows:auto 1fr auto;width:min(1180px,calc(100% - 48px));margin:0 auto;padding:28px 0 32px}
-header{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);opacity:0;animation:rise .8s .05s forwards}
+.page{min-height:calc(100svh - var(--hh));display:grid;grid-template-rows:1fr auto;width:min(1180px,calc(100% - 48px));margin:0 auto;padding:0 0 32px}
+header{position:sticky;top:0;z-index:10;background:var(--ink);border-bottom:1px solid var(--paper-3);opacity:0;animation:rise .8s .05s forwards}
+header .bar{width:min(1180px,calc(100% - 48px));margin:0 auto;padding:14px 0;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+:root{--hh:47px}
 header img{height:16px;display:block}
 .wordmark{display:block;line-height:0;transition:opacity .15s}.wordmark:hover{opacity:.75}.wordmark:focus-visible{outline:2px solid var(--oxide);outline-offset:4px;border-radius:2px}
 main{display:grid;place-items:center;text-align:center;padding:40px 0}
@@ -61,7 +63,7 @@ footer a{text-decoration:none;border-bottom:1px solid var(--paper-3);padding-bot
 footer a:hover{color:var(--paper);border-color:var(--paper)}
 .scroll{display:block;margin:26px auto 0;font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-decoration:none;opacity:0;animation:rise 1s 1.4s forwards}
 .scroll:hover{color:var(--paper)}
-.mission{border-top:1px solid var(--paper-3);background:var(--ink)}
+.mission{scroll-margin-top:var(--hh);border-top:1px solid var(--paper-3);background:var(--ink)}
 .mission .wrap{width:min(1180px,calc(100% - 48px));margin:0 auto;padding:clamp(64px,9vw,120px) 0 clamp(56px,8vw,104px)}
 .mission .label{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--oxide)}
 .mission .lead{margin:20px 0 0;font-size:1.05rem;line-height:1.5;color:var(--paper);max-width:52ch}
@@ -86,8 +88,8 @@ header .right{display:flex;align-items:center;gap:18px}
 </style>
 </head>
 <body>
+<header><div class="bar"><a class="wordmark" href="#top"><img src="../assets/cambera-wordmark-light.svg" alt="Cambera"></a><div class="right"><span>W budowie · Gdańsk</span><nav class="lang"><a href="../" hreflang="en" lang="en">EN</a><i>/</i><b>PL</b></nav></div></div></header>
 <div class="page">
-  <header><a class="wordmark" href="#top"><img src="../assets/cambera-wordmark-light.svg" alt="Cambera"></a><div class="right"><span>W budowie · Gdańsk</span><nav class="lang"><a href="../" hreflang="en" lang="en">EN</a><i>/</i><b>PL</b></nav></div></header>
 
   <main>
     <div>
