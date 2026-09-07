@@ -97,12 +97,12 @@ header .right{display:flex;align-items:center;gap:18px}
       <div class="rule"></div>
       <div class="cta">
       <!-- Early-access capture. NOTHING IS SENT FROM THIS PAGE.
-           TODO (~5 min): replace FORM_ID below with the real Tally form id, e.g.
+           TODO (~5 min): replace XxaqvV below with the real Tally form id, e.g.
            action="https://tally.so/r/wgL2Xk". Tally prefills its own e-mail field from the
            ?email= query parameter, so no backend and no API key are needed here.
-           While the action still contains FORM_ID, the script at the end of <body> keeps the
+           While the action still contains XxaqvV, the script at the end of <body> keeps the
            visitor on the page and hands the address over to hello@cambera.ai instead. -->
-      <form action="https://tally.so/r/FORM_ID" method="get">
+      <form action="https://tally.so/r/XxaqvV" method="get">
         <input type="email" name="email" required autocomplete="email" spellcheck="false" placeholder="ty@firma.pl" aria-label="Adres e-mail">
         <button class="btn" type="submit">Wczesny dostęp</button>
       </form>
@@ -134,7 +134,7 @@ header .right{display:flex;align-items:center;gap:18px}
   </footer>
 </div>
 <script>
-/* CTA, demo mode only. While the form action still carries the FORM_ID placeholder there is no
+/* CTA, demo mode only. While the form action still carries the XxaqvV placeholder there is no
    endpoint to post to, so we never fake a confirmation: we validate, then hand the typed address
    over to a pre-filled e-mail to hello@cambera.ai. Wire the real Tally id in the form above and this block
    steps aside automatically (native submit). */
@@ -142,7 +142,7 @@ header .right{display:flex;align-items:center;gap:18px}
   var form = document.querySelector('.cta form');
   if (!form) return;
   form.addEventListener('submit', function (event) {
-    if (form.getAttribute('action').indexOf('FORM_ID') === -1) return; /* real endpoint wired */
+    if (form.getAttribute('action').indexOf('XxaqvV') === -1) return; /* real endpoint wired */
     event.preventDefault();
     var field = form.elements.email;
     if (!field.checkValidity()) { field.reportValidity(); return; }
