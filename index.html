@@ -96,12 +96,9 @@ header .right{display:flex;align-items:center;gap:18px}
       <p class="sub">We generate the engineering decisions for precast elements — verified against EC2.</p>
       <div class="rule"></div>
       <div class="cta">
-      <!-- Early-access capture. NOTHING IS SENT FROM THIS PAGE.
-           TODO (~5 min): replace XxaqvV below with the real Tally form id, e.g.
-           action="https://tally.so/r/wgL2Xk". Tally prefills its own e-mail field from the
-           ?email= query parameter, so no backend and no API key are needed here.
-           While the action still contains XxaqvV, the script at the end of <body> keeps the
-           visitor on the page and hands the address over to hello@cambera.ai instead. -->
+      <!-- Early-access capture. This page has no backend: the form does a GET to the Tally
+           form (id XxaqvV) and Tally prefills its own e-mail field from the ?email= parameter.
+           Submissions live in Tally > Submissions and arrive by mail at hello@cambera.ai. -->
       <form action="https://tally.so/r/XxaqvV" method="get">
         <input type="email" name="email" required autocomplete="email" spellcheck="false" placeholder="you@company.com" aria-label="Work e-mail">
         <button class="btn" type="submit">Get early access</button>
@@ -133,34 +130,5 @@ header .right{display:flex;align-items:center;gap:18px}
     <span class="links"><a href="mailto:hello@cambera.ai">hello@cambera.ai</a><a href="https://www.linkedin.com/company/cambera" rel="noopener">LinkedIn</a></span>
   </footer>
 </div>
-<script>
-/* CTA, demo mode only. While the form action still carries the XxaqvV placeholder there is no
-   endpoint to post to, so we never fake a confirmation: we validate, then hand the typed address
-   over to a pre-filled e-mail to hello@cambera.ai. Wire the real Tally id in the form above and this block
-   steps aside automatically (native submit). */
-(function () {
-  var form = document.querySelector('.cta form');
-  if (!form) return;
-  form.addEventListener('submit', function (event) {
-    if (form.getAttribute('action').indexOf('XxaqvV') === -1) return; /* real endpoint wired */
-    event.preventDefault();
-    var field = form.elements.email;
-    if (!field.checkValidity()) { field.reportValidity(); return; }
-    var button = form.querySelector('button');
-    button.disabled = true;
-    button.textContent = 'Sending…';
-    var href = 'mailto:hello@cambera.ai?subject=Cambera%20%E2%80%94%20early%20access&body=' + encodeURIComponent('Please add me to the early-access list: ') + encodeURIComponent(field.value);
-    window.location.href = href;
-    window.setTimeout(function () {
-      var done = document.createElement('p');
-      done.className = 'note';
-      done.innerHTML = 'Almost there, finish in your mail client. If it did not open, write to <a href="mailto:hello@cambera.ai">hello@cambera.ai</a>.';
-      var hint = form.parentNode.querySelector('.note');
-      if (hint) hint.remove();
-      form.replaceWith(done);
-    }, 400);
-  });
-})();
-</script>
 </body>
 </html>
