@@ -1,0 +1,5 @@
+# https://cambera-ai.github.io/ — public teaser, two languages, no private paths.
+User-agent: *
+Allow: /
+
+Sitemap: https://cambera-ai.github.io/sitemap.xml
