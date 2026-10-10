@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#11110e">
+<title>Cambera</title>
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<style>
+:root{--ink:#11110e;--paper:#f6efe8;--mute:#b7ab97}
+html,body{margin:0;min-height:100%;background:var(--ink);color:var(--mute);font:16px/1.5 system-ui,sans-serif}
+main{display:grid;place-items:center;min-height:100vh;padding:24px}
+</style>
+<script>
+(function () {
+  var host = new URLSearchParams(location.search).get("to") || "";
+  if (/^[a-z0-9-]{1,63}\.viktor\.space$/.test(host)) {
+    location.replace("https://" + host + "/");
+  }
+})();
+</script>
+</head>
+<body>
+<main><p id="msg">Opening…</p></main>
+<script>
+setTimeout(function () { document.getElementById("msg").textContent = "Nothing to open here."; }, 1500);
+</script>
+</body>
+</html>
